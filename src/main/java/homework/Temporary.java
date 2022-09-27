@@ -13,7 +13,7 @@ public class Temporary extends Employee{
     }
     public void printInfo() {
         super.printInfo();
-        System.out.println("비졍규직");
+        System.out.println("비정규직");
         System.out.println("일한 시간 : "+workhour);
         System.out.println("급여 : "+salary);
         System.out.println();

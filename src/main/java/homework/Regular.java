@@ -13,7 +13,7 @@ public class Regular extends Employee{
 
     public void printInfo() {
         super.printInfo();
-        System.out.println("졍규직");
+        System.out.println("정규직");
         System.out.println("월급 : "+salary);
     }
 
