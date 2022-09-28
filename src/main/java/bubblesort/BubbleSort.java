@@ -22,7 +22,7 @@ public class BubbleSort {
 
             System.out.println(Arrays.toString(a));
             bubbleSort(7,a);
-        System.out.println(Arrays.toString(a));
+            System.out.println(Arrays.toString(a));
 
     }
 
