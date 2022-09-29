@@ -1,4 +1,4 @@
-package bubblesort;
+package algorithm;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
