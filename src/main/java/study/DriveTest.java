@@ -1,4 +1,4 @@
-package java_0925;
+package study;
 
 interface Printable{
     public abstract void print(String doc);

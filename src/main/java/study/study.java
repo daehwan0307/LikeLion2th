@@ -1,4 +1,4 @@
-package java_0928;
+package study;
 
 import java.util.Scanner;
 
