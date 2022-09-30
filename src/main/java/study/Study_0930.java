@@ -4,10 +4,49 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
+class DBox<T,S> {
+
+    private  T String;
+    private  S Integer;
+
+    public void set(T String, S Integer){
+        this.String = String;
+        this.Integer = Integer;
+    }
+
+    @Override
+    public  String toString(){
+        return this.String+"&"+this.Integer;
+    }
+}
+
 public class Study_0930 {
     public static void main(String[] args) {
 
+        DBox<String,Integer> box = new DBox<String,Integer>();
+        box.set("Apple",25);
 
+        System.out.println(box);
+
+
+
+/*
+        Box aBox = new Box();
+        Box oBox = new Box();
+
+        //aBox.set(new Apple());
+        //oBox.set(new Orange());
+        aBox.set("apple");
+        oBox.set("oragne");
+
+        //Apple ap = (Apple) aBox.get();
+       // Orange og = (Orange) oBox.get();
+
+        System.out.println(aBox.get());
+        System.out.println(oBox.get());
+
+
+        /*
         ArrayList<Integer> arr = null;
 
 
