@@ -1,4 +1,4 @@
-package algorithm;
+/*package algorithm;
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ public class Stack {
 
     public String printStack(){
 
-        if()
+
     }
 
     public static void main(String[] args) {
@@ -70,3 +70,4 @@ public class Stack {
         stack.printStack();
     }
 }
+*/
