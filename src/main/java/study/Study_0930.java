@@ -1,12 +1,40 @@
 package study;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
 public class Study_0930 {
     public static void main(String[] args) {
 
+
+        ArrayList<Integer> arr = null;
+
+
+
+        Integer n1 = Integer.valueOf(5);
+        Integer n2 = Integer.valueOf("1234");
+
+        System.out.println("큰수"+Integer.max(n1,n2));
+        /*
         Calendar d = Calendar.getInstance();
+
+        int hour24 = d.get(Calendar.HOUR_OF_DAY);
+
+        if(hour24>4 && hour24<12){
+            System.out.println("Good Morning");
+        }
+        else if(hour24>12 && hour24 <18){
+            System.out.println("Good Afternoon");
+
+        }
+        else if(hour24>18 && hour24 <22) {
+            System.out.print("Good Evening");
+        }
+        else
+            System.out.print("Good Night");
+
+
 
 
         /*
