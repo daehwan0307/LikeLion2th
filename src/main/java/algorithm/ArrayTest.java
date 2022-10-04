@@ -12,5 +12,6 @@ public class ArrayTest {
 
         }
         System.out.print(Arrays.toString(a));
+
     }
 }
