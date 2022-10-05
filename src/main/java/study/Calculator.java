@@ -1,8 +1,14 @@
 package study;
 
 public class Calculator {
+    int a;
+    int b;
+    public Calculator() {
+        this.a = a;
+        this.b=b;
+    }
 
-    public static int plus(int a,int b){
+    public static int plus(int a, int b){
 
         return a+b;
     }
@@ -18,4 +24,6 @@ public class Calculator {
 
         return (double)a/b;
     }
+
+
 }
