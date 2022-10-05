@@ -1,4 +1,4 @@
-package homework;
+package study;
 
 public class Regular extends Employee{
 

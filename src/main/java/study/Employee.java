@@ -1,4 +1,4 @@
-package homework;
+package study;
 
 public class Employee {
     String name; // 이름

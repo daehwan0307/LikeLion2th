@@ -1,4 +1,4 @@
-package collection;
+package study;
 
 import java.util.List;
 

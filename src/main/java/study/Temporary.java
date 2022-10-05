@@ -1,4 +1,4 @@
-package homework;
+package study;
 
 public class Temporary extends Employee{
     int workhour; // 일한 시간
