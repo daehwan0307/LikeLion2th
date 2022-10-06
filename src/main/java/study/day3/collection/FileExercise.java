@@ -2,15 +2,20 @@ package study.day3.collection;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class FileExercise {
-    public static void main(String[] args) {
 
-        File dir = new File("./");
-        File files[] = dir.listFiles();
-        for(File file : files){
-            System.out.println(file);
-        }
+    public char readAChar(String filename) throws IOException{
+        FileReader fileReader = new FileReader(filename);
+        return (char)fileReader.read();
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        FileExercise fileExercise = new FileExercise();
+        char c = fileExercise.readAChar("./file");
+        System.out.println(c);
     }
 }
 /*
