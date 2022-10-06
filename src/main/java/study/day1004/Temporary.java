@@ -1,4 +1,4 @@
-package study.day0930;
+package study.day1004;
 
 import study.day1004.Employee;
 
