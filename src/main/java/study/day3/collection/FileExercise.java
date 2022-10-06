@@ -13,3 +13,22 @@ public class FileExercise {
         }
     }
 }
+/*
+.\.git
+.\.gitignore
+.\.gradle
+.\.idea
+.\build
+.\build.gradle
+.\file
+.\gradle
+.\gradlew
+.\gradlew.bat
+.\out
+.\README.md
+.\settings.gradle
+.\src
+
+Process finished with exit code 0
+
+ */
