@@ -9,8 +9,13 @@ public class ReadFile {
         int count = 0;
         FileReader reader = new FileReader("./file");
 
-        char c = (char) reader.read();
-        
-        System.out.println(c);
+        for (int i = 0; i < 2; i++) {
+            char c = (char) reader.read();
+
+
+            System.out.println(c);
+
+        }
     }
+
 }
