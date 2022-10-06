@@ -1,9 +1,7 @@
 package codeup;
 //code up 1010번 문제
 
-import java.util.Scanner;
-
-public class Main {
+public class CodeUp1010 {
     public static void main(String[] args) {
         final char[][] arr = {
                 {'\u250C', '\u252C', '\u2510'},
