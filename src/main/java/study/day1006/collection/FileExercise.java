@@ -1,6 +1,5 @@
-package study.day3.collection;
+package study.day1006.collection;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -14,7 +13,7 @@ public class FileExercise {
     public static void main(String[] args) throws IOException {
 
         FileExercise fileExercise = new FileExercise();
-        char c = fileExercise.readAChar("./file");
+        char c = fileExercise.readAChar( "./file");
         System.out.println(c);
     }
 }

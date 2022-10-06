@@ -1,4 +1,4 @@
-package study;
+package study.day1005;
 
 class  Circle2 {
     private  int radius;

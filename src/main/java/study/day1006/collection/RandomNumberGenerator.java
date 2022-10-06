@@ -1,4 +1,4 @@
-package study.day3.collection;
+package study.day1006.collection;
 
 public class RandomNumberGenerator implements NumberGenerator{
     @Override

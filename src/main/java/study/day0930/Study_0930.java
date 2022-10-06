@@ -1,8 +1,4 @@
-package study;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Scanner;
+package study.day0930;
 
 class DBox<T,S> {
 

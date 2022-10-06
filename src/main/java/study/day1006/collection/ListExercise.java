@@ -1,4 +1,4 @@
-package study.day3.collection;
+package study.day1006.collection;
 
 import java.util.ArrayList;
 import java.util.List;

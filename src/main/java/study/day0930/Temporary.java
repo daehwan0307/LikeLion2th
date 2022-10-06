@@ -1,6 +1,8 @@
-package study;
+package study.day0930;
 
-public class Temporary extends Employee{
+import study.day1004.Employee;
+
+public class Temporary extends Employee {
     int workhour; // 일한 시간
     int time_pay; // 시간당 보수
     Temporary(String name, int age, String address, String department) {

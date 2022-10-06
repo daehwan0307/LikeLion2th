@@ -1,4 +1,4 @@
-package study;
+package study.day1005;
 
 import java.util.List;
 

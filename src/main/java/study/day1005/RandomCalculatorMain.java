@@ -1,4 +1,4 @@
-package study;
+package study.day1005;
 
 public class RandomCalculatorMain {
     public static void main(String[] args) {

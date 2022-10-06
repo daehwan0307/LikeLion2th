@@ -1,4 +1,4 @@
-package study;
+package study.day1005;
 
 public class Calculator {
     int a;

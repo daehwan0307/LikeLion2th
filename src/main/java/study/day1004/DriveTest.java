@@ -1,4 +1,4 @@
-package study;
+package study.day1004;
 
 interface Printable{
     public abstract void print(String doc);

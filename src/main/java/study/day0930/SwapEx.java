@@ -1,4 +1,4 @@
-package study;
+package study.day0930;
 
 public class SwapEx {
     public static void main(String[] args) {
