@@ -101,7 +101,7 @@ public class PopulationStatistics {
         return  moveCntMap;
     }
 
-    public Map
+
     public static void main(String[] args) throws IOException {
 
         String address = "./from_to.txt";
