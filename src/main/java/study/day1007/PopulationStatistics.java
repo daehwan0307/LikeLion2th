@@ -1,9 +1,6 @@
 package study.day1007;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -60,12 +57,48 @@ public class PopulationStatistics {
         //1byte 읽기
 
     }
+    
+    //파일 생성하기
+    public void createAFile(String filename){
+        File file = new File(filename);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
+    public  void write(List<String> strs, String filename){
+        File file = new File(filename);
+
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            for (String str : strs) {
+                writer.write(str);
+            }
+            writer.close();
+        }catch (IOException e){
+            e.printStackTrace();
+
+        }
+
+    }
+    public String fromToString(PopulationMove populationMove){
+        return populationMove.getFromSido()+","+ populationMove.getToSido()+"\n";
+    }
     public static void main(String[] args) throws IOException {
-        String address = "C:\\Users\\daehwan\\Desktop\\2021_인구관련연간자료_20220927_66125.csv";
 
+        String address = "C:\\Users\\daehwan\\Desktop\\2021_인구관련연간자료_20220927_66125.csv";
         PopulationStatistics populationStatistics = new PopulationStatistics();
         List<PopulationMove> pml = populationStatistics.readByLine(address);
-        System.out.println(pml.size());
+
+       List<String> strings = new ArrayList<>();
+       for(PopulationMove pm : pml){
+         //  System.out.printf("전입:%s, 전출:%s\n",pm.getFromSido(),pm.getToSido());
+           String fromTo = populationStatistics.fromToString(pm);
+           strings.add(fromTo);
+       }
+        System.out.println(strings.size());
+        populationStatistics.write(strings,"./from_to.txt");
     }
 }
