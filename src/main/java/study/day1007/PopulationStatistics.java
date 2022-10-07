@@ -5,7 +5,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PopulationStatistics {
 
@@ -41,7 +43,7 @@ public class PopulationStatistics {
         //String data="11,110,51500,2021,01,04,11,110,51500,5,1,033,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,9";
         //csv
         String[] splittedLine = data.split(",");
-        return new PopulationMove(splittedLine[6],splittedLine[0]);
+        return new PopulationMove(splittedLine[0],splittedLine[1]);
     }
 
     public  void readByChar(String filename) throws IOException {
@@ -86,19 +88,40 @@ public class PopulationStatistics {
     public String fromToString(PopulationMove populationMove){
         return populationMove.getFromSido()+","+ populationMove.getToSido()+"\n";
     }
+
+    public Map<String,Integer> getMoveCntMap(List<PopulationMove> pml){
+        Map<String,Integer> moveCntMap = new HashMap<>();
+        for(PopulationMove pm : pml){
+            String key = pm.getFromSido()+","+pm.getToSido();
+            if(moveCntMap.get(key)==null){
+                moveCntMap.put(key,1);
+            }
+            moveCntMap.put(key,moveCntMap.get(key)+1);
+        }
+        return  moveCntMap;
+    }
+
+    public Map
     public static void main(String[] args) throws IOException {
 
-        String address = "C:\\Users\\daehwan\\Desktop\\2021_인구관련연간자료_20220927_66125.csv";
-        PopulationStatistics populationStatistics = new PopulationStatistics();
-        List<PopulationMove> pml = populationStatistics.readByLine(address);
+        String address = "./from_to.txt";
+        PopulationStatistics ps = new PopulationStatistics();
+        List<PopulationMove> pml = ps.readByLine(address);
+        ///
 
-       List<String> strings = new ArrayList<>();
-       for(PopulationMove pm : pml){
-         //  System.out.printf("전입:%s, 전출:%s\n",pm.getFromSido(),pm.getToSido());
-           String fromTo = populationStatistics.fromToString(pm);
-           strings.add(fromTo);
-       }
-        System.out.println(strings.size());
-        populationStatistics.write(strings,"./from_to.txt");
+        Map<String,Integer> map = ps.getMoveCntMap(pml);
+        String targetFilename = "for_heatmap.txt";
+        ps.createAFile(targetFilename);
+        List<String> cntResult = new ArrayList<>();
+        for(String key : map.keySet()){
+            String[] fromto = key.split(",");
+            //매핑 후 저장
+            String s = String.format("%s, %s, %d\n",fromto[0],fromto[1],map.get(key));
+            cntResult.add(s);
+
+        }
+        ps.write(cntResult,targetFilename);
+
+
     }
 }
