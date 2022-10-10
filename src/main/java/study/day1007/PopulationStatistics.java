@@ -30,7 +30,7 @@ public class PopulationStatistics {
         );
         String str;
         while ((str=reader.readLine())!=null){
-        //    System.out.println(str);
+        //  System.out.println(str);
             PopulationMove pm = parse(str);
             pml.add(pm);
 
@@ -72,7 +72,6 @@ public class PopulationStatistics {
 
     public  void write(List<String> strs, String filename){
         File file = new File(filename);
-
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             for (String str : strs) {
@@ -81,7 +80,6 @@ public class PopulationStatistics {
             writer.close();
         }catch (IOException e){
             e.printStackTrace();
-
         }
 
     }
