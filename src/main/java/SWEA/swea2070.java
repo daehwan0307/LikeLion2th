@@ -2,8 +2,7 @@ package SWEA;
 
 import java.util.Scanner;
 
-class Solution
-{
+public class swea2070 {
     public static void main(String args[]) throws Exception
     {
 
@@ -23,5 +22,6 @@ class Solution
             else
                 System.out.println("<");
         }
-    }
 }
+}
+
