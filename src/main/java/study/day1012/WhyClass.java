@@ -20,6 +20,14 @@ public class WhyClass {
         arr[3]="C";
         arr[4]="2";
 
+        Hospital hospital = new Hospital("A1120837","서울 특별시 금천구 벚꽃로 286 삼성리더스타워 가산동","C",2,"avcd","null");
+
+        hospital.setDistrict();
+        String dis = hospital.getDistrict();
+        System.out.println(dis);
+
+
+
 
     }
 
