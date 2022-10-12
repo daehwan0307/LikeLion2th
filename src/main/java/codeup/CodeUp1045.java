@@ -14,6 +14,5 @@ public class CodeUp1045 {
         System.out.println(first%second);
         double A = (double) first;
         System.out.printf("%.2f\n", A/second);
-
     }
 }
