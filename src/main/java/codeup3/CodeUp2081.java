@@ -1,4 +1,4 @@
-package codeup2;
+package codeup3;
 
 public class CodeUp2081 {
     public int getMax(int[] arr){
