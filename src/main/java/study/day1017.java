@@ -4,7 +4,7 @@ public class day1017 {
     public static void main(String[] args) {
 
         day1017 day = new day1017();
-        day.makeT(3);
+        day.makeT(5);
     }
 
     public void makeT(int num){
