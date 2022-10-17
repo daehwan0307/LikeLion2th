@@ -1,4 +1,4 @@
-package study;
+package study.day1017;
 
 public class day1017 {
     public static void main(String[] args) {
