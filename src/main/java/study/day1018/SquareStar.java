@@ -3,8 +3,8 @@ package study.day1018;
 public class SquareStar {
     public static void main(String[] args) {
 
-        SquareStar ss = new SquareStar();
-        ss.printRecStar(3,4);
+
+        System.out.println("Hello World");
     }
 
     public void printSquareStar(int size){
