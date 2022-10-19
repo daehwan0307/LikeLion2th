@@ -10,9 +10,14 @@ class Stack01Test {
     void pushTest() {
         Stack01 stack01 = new Stack01();
         stack01.push(10);
-        int[] arr = stack01.getArr();
+
         stack01.push(20);
-        Assertions.assertEquals(10,arr[0]);
-        Assertions.assertEquals(20,arr[1]);
+        Assertions.assertEquals(20,stack01.pop());
+        Assertions.assertEquals(10,stack01.pop());
+
+        stack01.push(30);
+        Assertions.assertEquals(30,stack01.pop());
+
+
     }
 }
