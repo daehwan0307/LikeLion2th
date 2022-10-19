@@ -13,4 +13,7 @@ public class Stack01 {
         this.pointer ++;
 
     }
+    public int[] getArr(){
+        return arr;
+    }
 }
