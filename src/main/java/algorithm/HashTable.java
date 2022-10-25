@@ -28,7 +28,9 @@ public class HashTable {
         this.table[hashCode]=value;
         System.out.println(hashCode+"방에 저장완료");
     }
-
+    public int search(String key){
+        return this.table[hash(key)];
+    }
     public static void main(String[] args) {
         String[] names = new String[]{"DongyeonKang",
                 "SubinKang", "KwanwunKo", "HyunseokKo", "KyoungdukKoo", "YeonjiGu", "SoyeonKown", "OhsukKwon", "GunwooKim", "KiheonKim", "NayeongKim", "DohyeonKim", "MinkyoungKim", "MinjiKim", "SanghoKim", "SolbaeKim", "YejinKim", "EungjunKim", "JaegeunKim", "JeonghyeonKim", "JunhoKim", "JisuKim", "kimjinah", "HaneulKim", "HeejungKim", "KimoonPark", "EunbinPark", "JeongHoonPark", "JeminPark", "TaegeunPark", "JiwonBae", "SeunggeunBaek", "JihwanByeon", "HeungseopByeon", "JeongHeeSeo", "TaegeonSeo", "SeeYunSeok", "SuyeonSeong", "SeyoelSon", "MinjiSong", "JinwooSong", "hyunboSim", "SominAhn", "JiyoungAhn", "ChangbumAn", "SoonminEom",
@@ -39,7 +41,12 @@ public class HashTable {
         for (int i = 0; i < names.length; i++) {
           ht.insert(names[i],ht.hash(names[i]));
         }
+        System.out.println( ht.search("JunhaHwang"));
+        System.out.println(     ht.search("DaehwanJung"));
+        
         
 
     }
+
+
 }
