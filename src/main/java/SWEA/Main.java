@@ -7,24 +7,20 @@ public class Main {
     {
 
         Scanner sc = new Scanner(System.in);
-            int a = sc.nextInt();
-            int b = sc. nextInt();
+        int T;
+        T=sc.nextInt();
 
-            if((a+b)==4)
-            {
-                if(a>b){
-                    System.out.println("B");
-                }else System.out.println("A");
-            }
-            else {
-                if(a>b){
-                    System.out.println("A");
-
-                }else System.out.println(("B"));
+        for(int test_case = 1; test_case <= T; test_case++)
+        {
+            String str = sc.next();
+            for (int j = 2; j < 10; j++) {
+                if(str.substring(0,j).equals(str.substring(j,2*j))){
+                    System.out.printf("#%d %d\n",test_case,j);
+                    break;
+                }
             }
 
-
-
+        }
 
     }
 }
