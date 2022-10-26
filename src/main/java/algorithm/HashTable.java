@@ -1,12 +1,32 @@
 package algorithm;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class HashTable {
+    class Node{
+        private String key;
+        private Integer value;
 
+        public Node(String key, Integer value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public String getKey() {
+            return key;
+        }
+
+        public Integer getValue() {
+            return value;
+        }
+    }
+
+
+    List<Integer>[] table = new ArrayList[1000];
     private int size = 10000;
-    private int[] table = new int[size];
     public HashTable() {
     }
 
@@ -23,11 +43,27 @@ public class HashTable {
         return asciiSum % size;
     }
 
-    public  void insert(String key, Integer value){
-        int hashCode =hash(key);
-        this.table[hashCode]=value;
-        System.out.println(hashCode+"방에 저장완료");
+    public void insert(String key, int value) {
+        // List
+        int hashIdx = hash(key);
+        if (this.table[hashIdx] == null) {
+            this.table[hashIdx] = new ArrayList<>();
+        }
+        // Map, Object
+        this.table[hashIdx].add(new Node(key, value));
     }
+
+    public Integer get(String key) {
+        List<Node> nodes = this.table[hash(key)];
+        for (Node node : nodes) {
+            if (key.equals(node.getKey())) {
+                return node.value;
+            }
+        }
+        return null;
+    }
+
+
     public int search(String key){
         return this.table[hash(key)];
     }
@@ -43,7 +79,7 @@ public class HashTable {
         }
         System.out.println( ht.search("JunhaHwang"));
         System.out.println(     ht.search("DaehwanJung"));
-        
+
         
 
     }
