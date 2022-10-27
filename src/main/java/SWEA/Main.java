@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.io.FileInputStream;
 public class Main {
-    class Solution {
+    static class Solution {
         public String solution(String[] participant, String[] completion) {
 
             HashMap<String,Integer> hm = new HashMap<>(100000);
@@ -18,11 +18,9 @@ public class Main {
                 hm.remove(participant[i]);
             }
 
-            System.out.println(hm);
+            System.out.println(hm.keySet());
+            String answer = hm.keySet();
 
-            System.out.println();
-
-            return "";
         }
 
 
@@ -31,7 +29,8 @@ public class Main {
     public static void main(String[] args) {
         String[] participant = {"leo", "kiki", "eden"};
         String[] completion = {"eden", "kiki"};
-        Solution solution = new Solution;
+        Solution s = new Solution();
+        s.solution(participant,completion);
 
     }
 }
