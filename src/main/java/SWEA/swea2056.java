@@ -1,10 +1,8 @@
 package SWEA;
 
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
-public class swea2070 {
+public class swea2056 {
     public static void main(String args[]) throws Exception
     {
         int[] dayNum = {31,28,31,30,31,30,31,31,30,31,30,31};  // 1월~12월까지 각 날짜 수
