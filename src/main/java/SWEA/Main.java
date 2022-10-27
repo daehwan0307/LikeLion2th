@@ -11,6 +11,10 @@ public class Main {
             String answer = "";
             HashMap<String,String> hm = new HashMap<>(100000);
 
+            for (int i = 0; i < participant.length; i++) {
+                
+            }
+
             return answer;
         }
     }
