@@ -9,10 +9,10 @@ public class Main {
     class Solution {
         public String solution(String[] participant, String[] completion) {
             String answer = "";
-            HashMap<String,String> hm = new HashMap<>(100000);
+            HashMap<String,Integer> hm = new HashMap<>(100000);
 
             for (int i = 0; i < participant.length; i++) {
-                
+                hm.put(participant[i],i);
             }
 
             return answer;
