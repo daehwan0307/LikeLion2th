@@ -2,19 +2,16 @@ package SWEA;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.io.FileInputStream;
 public class Main {
-    public static void main(String args[]) throws Exception
-    {
+    class Solution {
+        public String solution(String[] participant, String[] completion) {
+            String answer = "";
+            HashMap<String,String> hm = new HashMap<>(100000);
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String participant = br.readLine();
-        System.out.println(participant);
-
-        
-
-
-
+            return answer;
+        }
     }
 }
