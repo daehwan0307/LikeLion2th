@@ -12,11 +12,14 @@ public class PhoneNumberList {
           hs.add(phone_book[i]);
         }
         for (int i = 0; i < phone_book.length; i++) {
-            if(hs.contains(phone_book[i]))
-                return false;
-            else
-                return true;
+            for (int j = i; j < phone_book.length; j++) {
+                if(phone_book[j+1].contains(phone_book[i]))
+                    return false;
+                else
+                    return true;
+            }
         }
+
         return answer;
     }
 
