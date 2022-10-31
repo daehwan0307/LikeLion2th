@@ -1,19 +1,18 @@
 package study.day1028;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+
+    class Solution {
+        public int[] solution(int[] answers) {
+            int[] answer = {};
+            return answer;
+        }
+    }
     public static void main(String[] args) {
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                if(i==j){
-                    System.out.printf("#");
-                }
-                else
-                    System.out.printf("+");
-            }
-            System.out.println("\n");
-        }
+
     }
 }
