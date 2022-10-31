@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    class Solution {
-        public int[] solution(int[] answers) {
+
+    public int[] solution(int[] answers) {
             int[] answer = {};
             return answer;
-        }
     }
+
     public static void main(String[] args) {
 
 
