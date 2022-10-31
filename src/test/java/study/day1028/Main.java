@@ -4,38 +4,41 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String args[]) throws Exception {
 
-    /*
-         1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, ...
-         2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, ...
-         3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, ...
-       */
-    public int[] solution(int[] answers) {
-            int[] answer = {};
-        int[] first = {1,2,3,4,5};
-        int[] second = {2,1,2,3,2,4,2,5};
-        int[] third = {3,3,1,1,2,2,4,4,5,5};
-        int firstAnswer = 0;
-        int secondAnswer = 0;
-        int thirdAnswer = 0;
+        Scanner sc = new Scanner(System.in);
+        int T;
+        T = sc.nextInt();
+        for (int i = 1; i < T; i++) {
+            int N = sc.nextInt();
+            int M = sc. nextInt();
+            int[] sizeArr = new int[(N-M+1)*(N-M+1)];
+            int[][] pari = new int[N][N];
+            int pariMax = 0;
+            for (int j = 0; j < N; j++) {
+                for (int k = 0; k < N; k++) {
+                    pari[j][k]=sc.nextInt();
+                }
+            }
 
-        for(int i = 0; i < answers.length; i++) {
-            if(answers[i] == first[i % 5]) {
-                firstAnswer++;
+            for (int j = 0; j <= N-M; j++) {
+                for (int k = 0; k <= N-M; k++) {
+                    int sum= 0;
+                    for (int l = 0; l < M; l++) {
+                        for (int m = 0; m < M; m++) {
+                            sum +=pari[j+l][k+m];
+                        }
+                    }
+                    if(pariMax<sum){
+                        pariMax=sum;
+                    }
+
+                }
+
             }
-            if(answers[i] == second[i % 8]) {
-                secondAnswer++;
-            }
-            if(answers[i] == third[i % 10]) {
-                thirdAnswer++;
-            }
+            System.out.println("#"+i+" " + pariMax);
+
         }
-        int max = Math.max(Math.max(firstAnswer, secondAnswer), thirdAnswer);
-            return answer;
     }
 
-    public static void main(String[] args) {
-
-
-    }
 }
