@@ -40,6 +40,16 @@ public class PrimeNumber {
         }
         return true;
     }
+    public static void main(String[] args) {
+        PrimeNumber pn = new PrimeNumber();
+        boolean r = pn.isPrime(17, new StatementStrategy() {
+            @Override
+            public boolean compare(int a, int b) {
+                return a * a <= b;
+            }
+        });
+        System.out.println(r);
+    }
 
 
 
