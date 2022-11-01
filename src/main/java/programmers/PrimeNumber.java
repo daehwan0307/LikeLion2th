@@ -2,6 +2,10 @@ package programmers;
 
 public class PrimeNumber {
 
+    //i<num
+    //i<num / 2
+    // i*i <num
+
     boolean isPrime(int num) {
 
         for (int i = 2; i < num; i++) {
@@ -9,8 +13,22 @@ public class PrimeNumber {
         }
         return true;
     }
+    boolean isPrime2(int num) {
 
-    interface
+        for (int i = 2; i<num / 2; i++) {
+            if(num % i != 0) return false;
+        }
+        return true;
+    }
+    boolean isPrime3(int num) {
+
+        for (int i = 2; i*i <num; i++) {
+            if(num % i != 0) return false;
+        }
+        return true;
+    }
+
+
 
 
 }
