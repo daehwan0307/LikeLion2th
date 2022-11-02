@@ -19,6 +19,9 @@ public class RemoveMultipleOf {
 //        }
 
         primeNumList.removeIf(integer -> integer%2==0 && integer!=2);
+        primeNumList.removeIf(integer -> integer%3==0 && integer!=3);
+        primeNumList.removeIf(integer -> integer%5==0 && integer!=5);
+        primeNumList.removeIf(integer -> integer%7==0 && integer!=7);
 
         System.out.println(primeNumList.size());
         System.out.println(primeNumList);
