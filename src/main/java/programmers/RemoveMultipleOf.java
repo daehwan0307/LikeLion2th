@@ -11,8 +11,15 @@ public class RemoveMultipleOf {
             primeNumList.add(i);
         }
 
-        System.out.println(primeNumList.size());
 
+
+        for (int i = 3; i <50; i++) {
+            if(i%2==0)
+                primeNumList.remove(i);
+        }
+
+        System.out.println(primeNumList.size());
+        System.out.println(primeNumList);
 
 
     }
