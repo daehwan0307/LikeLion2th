@@ -10,10 +10,10 @@ public class RemoveMultipleOf {
 //        for (int i = 2; i <= 50; i++) {
 //            primeNumList.add(i);
 //        }
-            int[] nums = new int[50];
-            int[] checks = new int[50];
+            int[] nums = new int[100];
+            int[] checks = new int[100];
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 1; i <= nums.length; i++) {
             nums[i] =i;
             checks[i] = 1;
         }
