@@ -12,7 +12,11 @@ public class RemoveMultipleOf {
 //        }
             int[] nums = new int[50];
             int[] checks = new int[50];
-            
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] =i;
+            checks[i] = 1;
+        }
 
 
 //        for (int i = 0; i < primeNumList.size(); i++) {
