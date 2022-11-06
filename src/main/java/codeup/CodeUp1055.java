@@ -1,15 +1,17 @@
-package codeup2;
+package codeup;
 
 import java.util.Scanner;
 
-public class CodeUp1056 {
+public class CodeUp1055 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
 
 
-        System.out.println(a!=b ? 1 : 0);
-
+        if((a==1)|(b==1))
+            System.out.println("1");
+        else System.out.println("0");
     }
 }
