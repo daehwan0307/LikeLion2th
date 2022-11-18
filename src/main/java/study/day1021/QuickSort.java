@@ -11,20 +11,23 @@ public class QuickSort {
     String s = "AB";
     int n = 1;
 
-    QuickSort qs = new QuickSort();
 
-    System.out.printf(Arrays.toString(qs.solution(s,n)) );
     }
 
-    public String[] solution(String s, int n){
-        String answer = "";
-        String[] strArr = answer.split("");
+    public String solution(String s, int n) {
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < strArr.length; i++) {
-            int ch = s.charAt(i)+n;
-           strArr[i] = Integer.toString(ch);
+        for (int i = 0; i < s.length(); i++) {
+            if((s.charAt(i) >= 'a' && s.charAt(i) <= 'z') || (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')){
+                int theta = 64;
+                if ((int) s.charAt(i) >= 97) theta = 96;
+                int r = ((int) s.charAt(i) - theta) % 26 + n;
+                sb.append((char)(theta + r));
+            } else {
+                sb.append(s.charAt(i));
+            }
         }
-        return strArr;
+        return sb.toString();
     }
 
 }
