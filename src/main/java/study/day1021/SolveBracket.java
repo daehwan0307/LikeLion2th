@@ -1,11 +1,15 @@
 package study.day1021;
 
 public class SolveBracket {
-    public  boolean solution(String s){
-        String[] splitted =s.split("()");
-        s=String.join("",splitted);
-        System.out.println(s);
-        return false;
+
+    public static void main(String[] args) {
+
+    }
+
+    public void printStar(){
+
+        System.out.println("*");
+        return printStar();
     }
 
 
